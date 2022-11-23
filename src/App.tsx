@@ -2,12 +2,19 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
-import { green, red } from '@mui/material/colors';
+import { blue, blueGrey, cyan, green, grey, lightGreen, pink, red } from '@mui/material/colors';
+import About from './components/About';
+import { Typography } from '@mui/material';
+import Projects from './components/Projects';
 
 const theme = createTheme({
   palette: {
-    primary: green
-  }
+    primary: blueGrey,
+    secondary: lightGreen
+  },
+  typography: {
+    fontFamily: 'Montserrat',
+  },
 })
 
 function App() {
@@ -15,6 +22,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
           <Navbar />
+          <About />
+          <Projects />
       </div>
     </ThemeProvider>
   );
