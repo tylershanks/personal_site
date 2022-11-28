@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Card, CardActions, CardContent, CardHeader, Collapse, Divider, Typography } from '@mui/material'
+import { Box, Button, Card, CardActions, CardContent, CardHeader, Collapse, Divider, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -37,39 +37,123 @@ function Projects() {
         <Typography sx={{fontFamily: 'Montserrat', mx: 3}} align='left' variant='h6'>
             Projects
         </Typography>
-        <Divider sx={{mb:3}}/>
+        <Divider />
+        {/* box with all the projects individually */}
+        <Box sx={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center',}}>
+            <Card sx={{bgcolor: '#607d8b', mx: 5, my: 5, width: 345}}>
+                <CardHeader
+                    title='Cocktails.io' 
+                    subheader="Personal Project"
+                    sx={{pb: 0}} titleTypographyProps={{variant:'h6' }}
+                />
+                    <CardContent>
+                        <Typography variant="body2">
+                            Fullstack CRUD Application    
+                        </Typography>
+                    </CardContent>
+                    <Divider sx={{mb:0}}/>
+                    <CardActions disableSpacing sx={{flexWrap: 'wrap'}}>
+                        <Button size="small" color='inherit'>GitHub</Button>
+                        <Button size="small" color='inherit'>Demo</Button>
+                        <ExpandMore
+                            expand={expanded}
+                            onClick={handleExpandClick}
+                            aria-expanded={expanded}
+                            aria-label="show more"
+                        >
+                            <ExpandMoreIcon />
+                        </ExpandMore>
+                    </CardActions>
 
-        <Card sx={{bgcolor: '#607d8b', mx: 5}}>
-            <CardHeader title='Cocktails.io'/>
-                <CardContent>
-                    <Typography>
-                        Live Link
-                    </Typography>
-                    <Typography>
-                        Github Link
-                    </Typography>
-                </CardContent>
-            <CardActions disableSpacing>
-                <ExpandMore
-                    expand={expanded}
-                    onClick={handleExpandClick}
-                    aria-expanded={expanded}
-                    aria-label="show more"
-                >
-                    <ExpandMoreIcon />
-                </ExpandMore>
-            </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <CardContent>
-                    <Typography>
-                        This project was created as;ldkfngas;vas;hvasd;kjhvas;kjhjn;kasjdgjhasjkl;gas;lkjg jas;kljgfn jasd;kjljnasd;kljfjasd;lkjfasd;lkfjasd;lkfjasd;lkvnas;urghnba;ksjnar;kjg hnklajshdbfahlkjsbk;javh;ajwlhjg;ajlkwa;kjsnbva;jkshnga;kjsdhfgjna;kjsdhga;kjwsehgt;kas jgbn;aksjbnga;ksjdbvS:KJDhvsa'HF;WOAIqehfqw;jkophfaspkf;djvbnaspi; uvbasui;kvbZLKJ:NvbzlkjhgbaWSE;IPUGFTBASDLKNVBAi;upwghbS;KJBVAS;dki AS;KJVB;AKSJDHBNF;KJQWERBGAS;DIODUVHBN;KJEAR/,MBNGV;'OIAUSDHGBV;QER KU/JABG;ASKJDBG' 
-                    </Typography>
-                    <Typography>
-                        Tools Used: 
-                    </Typography>
-                </CardContent>
-            </Collapse>
-        </Card>
+                <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    <CardContent>
+                        <Typography>
+                            Fullstack CRUD application designed to facilitate drink lookups and provide a means to document and save new recipes for bartenders. This application is fully mobile responsive, making it ideal for use behind a bar.  
+                        </Typography>
+                        <Divider />
+                        <Typography>
+                            Tools Used: JavaScript, React, Node, Express, MondoDB, Mongoose, MongoDB Atlas, RESTful APIs, Redux, Google OAuth, Webpack, MaterialUI
+                        </Typography>
+                    </CardContent>
+                </Collapse>
+            </Card>
+
+            <Card sx={{bgcolor: '#607d8b', mx: 5, width: 345}}>
+                <CardHeader
+                    title='Weather Melodies' 
+                    subheader="Personal Project"
+                    sx={{pb: 0}} titleTypographyProps={{variant:'h6' }}
+                />
+                    <CardContent>
+                        <Typography variant="body2">
+                            Spotify API Integration    
+                        </Typography>
+                    </CardContent>
+                    <Divider sx={{mb:0}}/>
+                    <CardActions disableSpacing sx={{flexWrap: 'wrap'}}>
+                        <Button size="small" color='inherit'>GitHub</Button>
+                        <Button size="small" color='inherit'>Demo</Button>
+                        <ExpandMore
+                            expand={expanded}
+                            onClick={handleExpandClick}
+                            aria-expanded={expanded}
+                            aria-label="show more"
+                        >
+                            <ExpandMoreIcon />
+                        </ExpandMore>
+                    </CardActions>
+
+                <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    <CardContent>
+                        <Typography>
+                            Look up weather and recieve a matching playlist.  
+                        </Typography>
+                        <Divider />
+                        <Typography>
+                            Tools Used: JavaScript, React
+                        </Typography>
+                    </CardContent>
+                </Collapse>
+            </Card>
+
+            <Card sx={{bgcolor: '#607d8b', mx: 5, my: 5, width: 345}}>
+                <CardHeader
+                    title='Portfolio Website' 
+                    subheader="Personal Project"
+                    sx={{pb: 0}} titleTypographyProps={{variant:'h6' }}
+                />
+                    <CardContent>
+                        <Typography variant="body2">
+                            AWS Hosted Application    
+                        </Typography>
+                    </CardContent>
+                    <Divider sx={{mb:0}}/>
+                    <CardActions disableSpacing sx={{flexWrap: 'wrap'}}>
+                        <Button size="small" color='inherit'>GitHub</Button>
+                        <Button size="small" color='inherit'>Demo</Button>
+                        <ExpandMore
+                            expand={expanded}
+                            onClick={handleExpandClick}
+                            aria-expanded={expanded}
+                            aria-label="show more"
+                        >
+                            <ExpandMoreIcon />
+                        </ExpandMore>
+                    </CardActions>
+
+                <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    <CardContent>
+                        <Typography>
+                            Look up weather and recieve a matching playlist.  
+                        </Typography>
+                        <Divider />
+                        <Typography>
+                            Tools Used: JavaScript, React
+                        </Typography>
+                    </CardContent>
+                </Collapse>
+            </Card>
+        </Box>
     </Box>
   )
 }
