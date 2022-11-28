@@ -6,6 +6,7 @@ import { blue, blueGrey, cyan, green, grey, lightGreen, pink, red } from '@mui/m
 import About from './components/About';
 import { Typography } from '@mui/material';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 const theme = createTheme({
   palette: {
@@ -24,6 +25,7 @@ function App() {
           <Navbar />
           <About />
           <Projects />
+          <Contact />
       </div>
     </ThemeProvider>
   );

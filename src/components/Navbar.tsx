@@ -34,6 +34,13 @@ function Navbar() {
             );
     };
 
+    const onNavClick = (e: any, id: any) => {
+        e.preventDefault();
+        document?.getElementById(id)?.scrollIntoView();
+        setOpen(false)
+        //need to get modal to close after click
+    }
+
     return (
         <AppBar position="static">
             <Toolbar sx={{
@@ -69,9 +76,9 @@ function Navbar() {
                 <Box mr= {{xs: 2, sm: 4}}> {/* xs: 0-599, sm: 600-900 or 600+*/}
                     <Hidden smDown>
                         <Stack direction='row' spacing={2}>
-                            <Button color='inherit' href='#middle'>about</Button>
-                            <Button color='inherit'>projects</Button>
-                            <Button color='inherit'>contact</Button>
+                            <Button color='inherit' onClick={(e) => onNavClick(e, 'about')}>about</Button>
+                            <Button color='inherit' onClick={(e) => onNavClick(e, 'projects')}>projects</Button>
+                            <Button color='inherit' onClick={(e) => onNavClick(e, 'contact')}>contact</Button>
                         </Stack>
                     </ Hidden>
                     <Hidden smUp>
@@ -105,9 +112,9 @@ function Navbar() {
                         </div>
                         <Divider />
                         <Stack direction='column' spacing={1} margin={3}>
-                            <Button color='inherit'>about</Button>
-                            <Button color='inherit'>projects</Button>
-                            <Button color='inherit'>contact</Button>
+                            <Button color='inherit' onClick={(e) => onNavClick(e, 'about')}>about</Button>
+                            <Button color='inherit' onClick={(e) => onNavClick(e, 'projects')}>projects</Button>
+                            <Button color='inherit' onClick={(e) => onNavClick(e, 'contact')}>contact</Button>
                         </Stack>
 
                     </Box>

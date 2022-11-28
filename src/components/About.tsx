@@ -6,6 +6,8 @@ function About() {
   return (
     <Box 
         sx={{display: 'flex', flexDirection: 'column', py: 5, maxWidth: 'md'}} width='100%'
+        className='about'
+        id='about'
     >
         <Typography sx={{fontFamily: 'Montserrat', mx: 3}} align='left' variant='h6'>
             About
