@@ -1,0 +1,53 @@
+
+
+@keyframes strokeDraw {
+    0% {
+        stroke-dashoffset: -48px;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+    }
+}
+
+@keyframes LogoStrokeDraw {
+    0% {
+        stroke-dashoffset: -128px;
+    }
+    40% {
+        stroke-dashoffset: 0px;
+    }
+    70% {
+        stroke-dashoffset: 0px;
+    }
+    100% {
+        stroke-dashoffset: -128px;
+    }
+}
+
+.hexagon {
+    stroke: black;
+    stroke-width: 0.5px;
+    fill: transparent;
+    stroke-dasharray: 48px;
+    animation-iteration-count: 1;
+    animation: 1.5s ease-in-out 0s strokeDraw;
+    animation-fill-mode: forwards;
+}
+
+
+.hexagon2 {
+    stroke: black;
+    stroke-width: 0.5px;
+    fill: transparent;
+}
+
+
+.mainLogo {
+    stroke: black;
+    stroke-width: 0.5px;
+    fill: transparent;
+    stroke-dasharray: 128px;
+    animation-iteration-count: 1;
+    animation: 3s ease-in-out 0s LogoStrokeDraw;
+    animation-fill-mode: forwards;
+}

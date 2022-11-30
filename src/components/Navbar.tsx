@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Component } from 'react';
 import './Navbar.css';
-import { IconButton, AppBar, Toolbar, Typography, Box, Stack, Button, Hidden, SwipeableDrawer, Divider, autocompleteClasses } from '@mui/material';
+import { IconButton, AppBar, Toolbar, Typography, Box, Stack, Button, Hidden, SwipeableDrawer, Divider, autocompleteClasses, Slide } from '@mui/material';
 import SpokeIcon from '@mui/icons-material/Spoke';
 import LanguageIcon from '@mui/icons-material/Language';
 import LensBlurIcon from '@mui/icons-material/LensBlur';
@@ -11,6 +11,20 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import tsLogo from '../logoMain.svg'
 import { SvgIcon as MuiSvgIcon, SvgIconProps, styled } from '@mui/material';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+
+interface Props {
+    children: React.ReactElement;
+}
+
+function HideOnScroll({ children }: Props) {
+    const trigger = useScrollTrigger();
+    return (
+        <Slide appear={false} direction={'down'} in={!trigger}>
+            {children}
+        </Slide>
+    )
+}
 
 function Navbar() {
 
@@ -38,11 +52,11 @@ function Navbar() {
         e.preventDefault();
         document?.getElementById(id)?.scrollIntoView();
         setOpen(false)
-        //need to get modal to close after click
     }
 
     return (
-        <AppBar position="static">
+        <HideOnScroll>
+        <AppBar position="fixed">
             <Toolbar sx={{
                             width: "100%",
                             maxWidth: 'md',
@@ -120,6 +134,7 @@ function Navbar() {
                     </Box>
             </SwipeableDrawer>
         </AppBar>
+        </HideOnScroll>
     );
 }
 

@@ -7,6 +7,8 @@ import About from './components/About';
 import { Typography } from '@mui/material';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import { Box } from '@mui/system';
+import InitialLoadAnimation from './components/InitialLoadAnimation';
 
 const theme = createTheme({
   palette: {
@@ -22,6 +24,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
+          <InitialLoadAnimation />
+        <Box sx={{height:64}}></Box>
           <Navbar />
           <About />
           <Projects />
