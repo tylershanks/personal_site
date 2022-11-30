@@ -4,7 +4,7 @@ import React from 'react'
 function Contact() {
   return (
     <Box 
-        sx={{display: 'flex', flexDirection: 'column', py: 5, maxWidth: 'md'}} width='100%'
+        sx={{display: 'flex', flexDirection: 'column', py: 5, maxWidth: 'xl'}} width='100%'
         className='contact'
         id='contact'
     >

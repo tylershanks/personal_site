@@ -77,7 +77,7 @@ function InitialLoadAnimation() {
             sx={{ 
                 position: 'fixed',
                 zIndex: 'tooltip', 
-                bgcolor: 'white', 
+                bgcolor: '#121212', 
                 display: 'flex', 
                 justifyContent: 'center', 
                 alignItems: 'center'

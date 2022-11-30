@@ -56,12 +56,15 @@ function Navbar() {
 
     return (
         <HideOnScroll>
-        <AppBar position="fixed">
-            <Toolbar sx={{
-                            width: "100%",
-                            maxWidth: 'md',
-                            mx: "auto",
-                        }} disableGutters>
+        <AppBar position="fixed" elevation={10} sx={{bgcolor: '#607d8b'}}>
+            <Toolbar 
+                sx={{
+                    width: "100%",
+                    maxWidth: 'xl',
+                    mx: "auto",
+                }} 
+                disableGutters
+            >
                 <Box sx={{mr: 'auto', ml: 2}}>
                     <IconButton color='inherit'>
                         <MyLogo/>
@@ -110,7 +113,7 @@ function Navbar() {
                 sx={{color: 'green'}}
                 PaperProps={{
                     sx: {
-                    backgroundColor: "#FFF8EA"
+                    backgroundColor: "#607d8b"
                     }
                 }}>
                     <Box>
